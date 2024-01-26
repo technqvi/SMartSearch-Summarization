@@ -4,7 +4,7 @@ __pycache__
 __pycache__/
 ScriptJob
 .venv
-.env
+*.env
 *.lnk
 *.pbix
 *.vsdx
