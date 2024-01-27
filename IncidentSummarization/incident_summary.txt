@@ -1,12 +1,7 @@
- An IT incident involving a daily health check of OpenShift Container Platform, Premium manufactured by Red Hat, was reported on January 26, 2024, at 9:00 AM and resolved by 11:30 AM. The incident had a severity level of Cosmetic and was categorized as a General Incident.
+ An IT incident was reported on January 2, 2024, at 13:00 involving the software "Incident System Management" manufactured by YIP. The severity level of the incident was major. The incident involved deploying a script to import data from SmartDB to Google Cloud Storage to enable Search Vertex AI.
 
-The incident description indicated that the issue was related to the daily health check status. To resolve the problem, the engineer team from VMWare-vRA/Tanzu, RedHat-OpenShift/JBOSS, Oracle LDAP, and IBM Identity Manager implemented the following solutions:
+The detailed description of the incident includes importing structured data in the form of an NDJSON-formatted dataset ingested from a Cloud Storage bucket. The incident was reported by Pongthorn Sangkaphet, who expected the issue to be fixed by Monday, January 12, 2024, and would close the issue if resolved.
 
-1. Checked pod count (All node and All node and worker only).
-2. Checked file system usage (All node and worker only).
-3. Checked /backup/etcd-backup.
-4. Checked Node status, pod, and file system usage.
-5. Checked usage PersistentVolumeClaims.
-6. Checked alarm.
+Two solutions were proposed to resolve the incident. The first solution provided steps to ingest data from Cloud Storage, including creating a JSON file, ingesting the JSON file to Google Cloud Storage, importing the JSON file from Google Cloud Storage to the data store, and configuring and deploying the search. The second solution addressed Pongthorn's concerns about purging current data and reconfiguring the data schema. The Google Service team responded that they would look forward to reloading the search page to get the facet widget as expected on the coming Monday and would close the issue if the issue was fixed.
 
-By implementing these solutions, the incident was successfully resolved, and the system was restored to its normal operational state.
+The incident was not fully resolved as of the provided information.

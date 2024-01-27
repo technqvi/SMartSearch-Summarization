@@ -1,7 +1,7 @@
 Provide a summary, no more than five paragraphs, for following IT-Incident-Case:
 
 IT-Incident was reported at  {{ sr['open_datetime'] }} and it was resolved completely at {{ sr['close_datetime'] }}.
-It involved {{ sr['incident_type'] }}  and  severity-level  was {{ sr['severity'] }}.
+It was involved {{ sr['incident_type'] }}  and  severity-level  was {{ sr['severity'] }}.
 
 The following bullets  are detailed  of the {{ sr['product_type'] }}
   - Serial Number : {{ sr['serial'] }}
