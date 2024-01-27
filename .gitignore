@@ -11,7 +11,6 @@ ScriptJob
 *.ndjson
 *.json
 *.xlsx
-*.txt
 *.docx
 
 incident_conent.txt

@@ -1,0 +1,29 @@
+prompt = """
+Provide a very short summary, no more than three sentences, for the following article:
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+
+Summary:
+
+"""
+
+
+prompt = """
+Provide a TL;DR for the following article:
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+
+TL;DR:
+"""
+
+prompt = """
+Provide a very short summary in four bullet points for the following article:
+
+Our quantum computers work by manipulating qubits in an orchestrated fashion that we call quantum algorithms.
+The challenge is that qubits are so sensitive that even stray light can cause calculation errors — and the problem worsens as quantum computers grow.
+
+Bulletpoints:
+
+"""

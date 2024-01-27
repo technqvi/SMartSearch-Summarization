@@ -1,0 +1,12 @@
+ An IT incident involving a daily health check of OpenShift Container Platform, Premium manufactured by Red Hat, was reported on January 26, 2024, at 9:00 AM and resolved by 11:30 AM. The incident had a severity level of Cosmetic and was categorized as a General Incident.
+
+The incident description indicated that the issue was related to the daily health check status. To resolve the problem, the engineer team from VMWare-vRA/Tanzu, RedHat-OpenShift/JBOSS, Oracle LDAP, and IBM Identity Manager implemented the following solutions:
+
+1. Checked pod count (All node and All node and worker only).
+2. Checked file system usage (All node and worker only).
+3. Checked /backup/etcd-backup.
+4. Checked Node status, pod, and file system usage.
+5. Checked usage PersistentVolumeClaims.
+6. Checked alarm.
+
+By implementing these solutions, the incident was successfully resolved, and the system was restored to its normal operational state.

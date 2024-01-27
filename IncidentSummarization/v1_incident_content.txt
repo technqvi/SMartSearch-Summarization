@@ -1,0 +1,26 @@
+Provide a summary, no more than five paragraphs, for following IT-Incident-Case:
+
+IT-Incident was reported at  {{ sr['open_datetime'] }} and it was resolved completely at {{ sr['close_datetime'] }}.
+It involved {{ sr['incident_type'] }}  and  severity-level  was {{ sr['severity'] }}.
+
+The following bullets  are detailed  of the {{ sr['product_type'] }}
+  - Serial Number : {{ sr['serial'] }}
+  - Model : {{ sr['model'] }}
+  - Brand( Manufactured by) :  {{ sr['brand'] }}. 
+
+The incident involved in the following detail.
+{{ sr['subject'] }}
+
+For more detail ,incident description was indicated as below.
+{{ sr['description'] }}
+
+The last section , it summarizes how to fix the problem  with the list of solutions as below.
+Each solution consists of engineer-team and solution-description accordingly. 
+
+{% for index,item in df.iterrows() %}
+  {{ item['running_number'] }} # {{ item['engineer_team'] }} :  
+  {{ item['solution'] }}
+
+ {% endfor %}
+
+ Summary:
