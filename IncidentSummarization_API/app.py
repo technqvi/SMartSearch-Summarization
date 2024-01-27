@@ -27,7 +27,6 @@ def get_incident_summarization_by_id(incident_id):
         incident_content=get_incident_content(incident_id=incident_id,config=config)
         incident_summarization=summarize_incident(incident_content,config)
         return jsonify({'success': True, 'incident_summarization': incident_summarization})
-        # return jsonify({'success': True, 'incident_summarization': "Test:ABCD-1234"})
 
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})
