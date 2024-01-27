@@ -1,7 +1,0 @@
- An IT incident was reported on January 2, 2024, at 13:00 involving the software "Incident System Management" manufactured by YIP. The severity level of the incident was major. The incident involved deploying a script to import data from SmartDB to Google Cloud Storage to enable Search Vertex AI.
-
-The detailed description of the incident includes importing structured data in the form of an NDJSON-formatted dataset ingested from a Cloud Storage bucket. The incident was reported by Pongthorn Sangkaphet, who expected the issue to be fixed by Monday, January 12, 2024, and would close the issue if resolved.
-
-Two solutions were proposed to resolve the incident. The first solution provided steps to ingest data from Cloud Storage, including creating a JSON file, ingesting the JSON file to Google Cloud Storage, importing the JSON file from Google Cloud Storage to the data store, and configuring and deploying the search. The second solution addressed Pongthorn's concerns about purging current data and reconfiguring the data schema. The Google Service team responded that they would look forward to reloading the search page to get the facet widget as expected on the coming Monday and would close the issue if the issue was fixed.
-
-The incident was not fully resolved as of the provided information.
