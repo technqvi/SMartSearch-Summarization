@@ -9,6 +9,7 @@ def get_incident_content(incident_id,config):
     Returns:
     str: proper text to be fed to Generative AI to generate summarization.
     """
+    template='v1_incident_content.txt'
 
     import psycopg2
     import pandas as pd
@@ -97,28 +98,20 @@ def get_incident_content(incident_id,config):
     # https://cloud.google.com/vertex-ai/docs/samples/aiplatform-sdk-summarization#aiplatform_sdk_summarization-python
 
     # create template on text file as below.
-    """
-    Incident Case:
-    {{ incidentInfo['product_type'] }}  has raised some troubles   at  {{ incidentInfo['open_datetime'] }}.
-    This involved as detail below.
-    {{ incidentInfo['subject'] }}
-    List Solution as the folloring steps
-    {% for index,item in solutionDetailInfo.iterrows() %}
-    {{ item['engineer_team' ] }} :  {{ item['solution_des'] }}. 
-    {% endfor %}
-    """
-
+    
     from jinja2 import Template
+    try:
+        # Read your Jinja template file
+        with open(template, 'r') as file:
+            template_text = file.read()
+        # Create a Jinja template object
+        template = Template(template_text)
+        # Render the template with Pandas variables
+        content_text = template.render( sr=sr,df=df )
+    except Exception as e:
+        raise e
 
-    # Read your Jinja template file
-    with open('v1_incident_content.txt', 'r') as file:
-        template_text = file.read()
-
-    # Create a Jinja template object
-    template = Template(template_text)
-
-    # # Render the template with Pandas variables
-    content_text = template.render( sr=sr,df=df )
+    
 
     # # # # Print the rendered text
     # print(content_text)
@@ -126,17 +119,6 @@ def get_incident_content(incident_id,config):
 
     # %%
     return content_text
-
-
-# generate python main function and invoke  get_incident_content function
-# if __name__ == "__main__":
-#     incident_id=4438  # 3743 long sample AIS
-#     config = dotenv_values('../.env')
-#     content_text=get_incident_content(incident_id=incident_id,config=config)
-#     print(content_text)
-#     print("find length of content_text variable")
-#     n_str=len(content_text)
-#     print(n_str)
 
 
 

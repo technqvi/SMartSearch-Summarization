@@ -1,4 +1,4 @@
-Provide a summary, no more than five paragraphs, for following IT-Incident-Case:
+Provide a summary, no more than 5 paragraphs, for following IT-Incident-Case:
 
 IT-Incident was reported at  {{ sr['open_datetime'] }} and it was resolved completely at {{ sr['close_datetime'] }}.
 It was involved {{ sr['incident_type'] }}  and  severity-level  was {{ sr['severity'] }}.
