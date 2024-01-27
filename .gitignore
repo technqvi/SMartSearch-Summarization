@@ -14,6 +14,9 @@ ScriptJob
 *.txt
 *.docx
 
+incident_conent.txt
+template-summary.txt
+
 incident-smart-search-yip
 flask_web_search
 ref
