@@ -24,7 +24,8 @@ app = Flask(__name__)
 def get_incident_summarization_by_id(incident_id):
     try:
         config = dotenv_values('.env')
-        incident_content=get_incident_content(incident_id=incident_id,config=config)
+        content_template="v1_incident_template.txt"
+        incident_content=get_incident_content(incident_id=incident_id, content_template= content_template,config=config)
         incident_summarization=summarize_incident(incident_content,config)
         return jsonify({'success': True, 'incident_summarization': incident_summarization})
 
@@ -35,9 +36,9 @@ def get_incident_summarization_by_id(incident_id):
 # cd IncidentSummarization and run this command  python app.py
 if __name__ == '__main__':
     app.run(debug=True)
-    # app.run(host='0.0.0.0', port=8080, debug=True)
+    # app.run(host='0.0.0.0', port=5000, debug=True)
 
 # open cmd and do the following
-#cd IncidentSummarization
+#cd IncidentSummarization_API
 #python app.py
 

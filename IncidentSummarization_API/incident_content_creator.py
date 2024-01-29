@@ -1,15 +1,16 @@
 
 # %%
-def get_incident_content(incident_id,config):
+def get_incident_content(incident_id,content_template,config):
     """
     Take incident id to get data from incident to create incident as content.
     Parameters:
     - incidetn_id (int):  id from app_incident table.
+    - content_template (str):  path to template file to create desired summarization content.
     - config (int):  config values loaded from dotenv_values
     Returns:
     str: proper text to be fed to Generative AI to generate summarization.
     """
-    template='v1_incident_content.txt'
+    # template='v1_incident_content.txt'
 
     import psycopg2
     import pandas as pd
@@ -102,7 +103,7 @@ def get_incident_content(incident_id,config):
     from jinja2 import Template
     try:
         # Read your Jinja template file
-        with open(template, 'r') as file:
+        with open(content_template, 'r') as file:
             template_text = file.read()
         # Create a Jinja template object
         template = Template(template_text)
