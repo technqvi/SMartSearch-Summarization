@@ -7,7 +7,7 @@ Summary:
 My Template Ver#2
 """"
 Provide a concise summary for the following IT-Incident-Case:
-Return the summariation response including no more than 5 bullets and 5 paragraphs and add on a few benificial pieces of best practices more than 3 bullets.
+Return the summarization response including no more than 5 bullets and 5 paragraphs and add on no more than 2 bullets of the most relevant and beneficial pieces of best practices/advice 
 that cover the key attributes and key points of the text.
 
 {incident_promt }

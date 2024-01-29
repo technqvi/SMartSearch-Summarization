@@ -20,7 +20,7 @@ def get_incident_summarization_by_id():
     import text_bison as bison
     from dotenv import dotenv_values
     import os
-    incident_id= 4300 #4431  #4300  #4438 # 3743 long sample AIS
+    incident_id= 4431 #4431  #4300  #4438 # 3743 long sample AIS
     config = dotenv_values('.env')
     content_template="v2_incident_template.txt"
     content_text=cc.get_incident_content(incident_id=incident_id,content_template=content_template,config=config)
