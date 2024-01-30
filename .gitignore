@@ -13,8 +13,7 @@ ScriptJob
 *.xlsx
 *.docx
 
-incident_conent.txt
-incident_summary.txt
+test-input-output
 
 incident-smart-search-yip
 flask_web_search
