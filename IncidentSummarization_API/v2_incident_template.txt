@@ -25,4 +25,4 @@ Each solution consists of engineer-team and solution-description accordingly.
 
  {% endfor %}
 
- Bulletpoints and Paragraphs Summary::
+ Bulletpoints and Paragraphs Summary:

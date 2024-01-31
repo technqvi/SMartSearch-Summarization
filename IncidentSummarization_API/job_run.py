@@ -32,7 +32,7 @@ def get_incident_summarization_by_id(incident_id,model_id):
     print("find length of content_text variable")
     n_str=len(content_text)
     print(f"=============Total length of content_text {n_str}====================")
-    print(n_str)
+
 
     if model_id==1: 
         incident_summarization=bison.summarize_incident(content_text,config)
@@ -41,8 +41,8 @@ def get_incident_summarization_by_id(incident_id,model_id):
         incident_summarization=""
         responses=gemini.summarize_incident(content_text,config)
         for response in responses:
-            # incident_summarization=incident_summarization+response       
-            print(response.text, end="")
+            incident_summarization=incident_summarization+response.text     
+            # print(response.text, end="")
 
     print(f"=============Total length of summary_text {len(incident_summarization)}====================")
 
@@ -55,14 +55,14 @@ def get_incident_summarization_by_id(incident_id,model_id):
         file.write(incident_summarization)
 
 if __name__ == "__main__":
-    incident_id= 4300 #4431  #4300  #4438 # 3743 long sample AIS
+    incident_id= 4439  #  4439(Thai BigquerMIS) 4300 #4431  #4300  #4438 # 3743 long sample AIS
     model_id = 1
 
     print("Enter the following incident id: ")
     id = input("Incident ID : ")
 
-    # print("1=bison and 2=gemini ")
-    # model_id = input("Model ID : ")
+    print("1=bison and 2=gemini ")
+    model_id = input("Model ID : ")
 
     get_incident_summarization_by_id(int(id),int(model_id))
 
