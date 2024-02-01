@@ -13,7 +13,8 @@ Build Enterprise Search using [Vertex AI Search](https://cloud.google.com/vertex
 * Grab entire incidence detail to create incident content template to let Gen-AI generate incident summary.
 
 ## Program Structure
-* [RunImportData.py](https://github.com/technqvi/SMartSearch-Summarization/blob/main/RunImportData.py) : main 3 scripts in  [IncidentSearch_DataProcessing](https://github.com/technqvi/SMartSearch-Summarization/tree/main/IncidentSearch_DataProcessing sequcially as mentioned in [Incident Search (Vertex AI Search)](https://github.com/technqvi/SMartSearch-Summarization?tab=readme-ov-file#incident-search-vertex-ai-search)
+* [RunImportData.py](https://github.com/technqvi/SMartSearch-Summarization/blob/main/RunImportData.py) : Run 3 main module files in  [IncidentSearch_DataProcessing](https://github.com/technqvi/SMartSearch-Summarization/tree/main/IncidentSearch_DataProcessing)
+sequcially as above process description in [Incident Search (Vertex AI Search)](https://github.com/technqvi/SMartSearch-Summarization?tab=readme-ov-file#incident-search-vertex-ai-search)
 * [IncidentSearch_DataProcessing](https://github.com/technqvi/SMartSearch-Summarization/tree/main/IncidentSearch_DataProcessing)  : 3 Core module files to ingest json data from database to cloud starage and  data store in Searh App accordingly. 
 * [IncidentSummarization_API](https://github.com/technqvi/SMartSearch-Summarization/tree/main/IncidentSummarization_API) : Module files and template files to generate incident summarization as specified template description, It is service as FLASK API in order for SMartApp WebApplication to invoke this function . 
 
