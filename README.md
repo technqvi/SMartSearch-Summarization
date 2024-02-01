@@ -11,7 +11,7 @@ Build Enterprise Search using [Vertex AI Search](https://cloud.google.com/vertex
 * Try search something on Search page and click to view search results detail.
 * Click Summarization on Search page 
 * Grab entire incidence detail to create incident content template to let Gen-AI generate incident summary.
-* Store incident summarization to SmartApp database including  summarization feedback (like/disklike) from user for 2 pureposed.
+* Store incident summarization to SmartApp database including  summarization feedback (like/disklike) from user  for 2 main purposes.
   * Evaluate how well the model generate summarization.
   * Collect incident summary to classify the incident knowledge base as knowledge repository shortly. 
 
