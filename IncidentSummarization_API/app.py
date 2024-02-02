@@ -7,7 +7,7 @@ How to initialize project after installing FLASK for building Flask REST APIs pr
    - GET Method function
    - Desing 1 parameter named incident_id as int64.
    - The return type is a string
-3. The function nname get_incident_summarization_by_id is  responsible for doing the following
+3. The function name get_incident_summarization_by_id is  responsible for doing the following
    - call get_incident_content function in incident_content_creator(incident_content_creator.py) module to return to content_text  variable as string
    - call summarize_incident function in text_bison(text_bison.py) module  and resturn result to  incident_summarization 
 5. Create a Python client file, that will Invoke get_incident_summarization_by_id in   through Rest-API by passing incident_id as an argument to the API.
@@ -15,8 +15,9 @@ How to initialize project after installing FLASK for building Flask REST APIs pr
 """
 from flask import Flask, request, jsonify
 from incident_content_creator import get_incident_content
-from text_bison import summarize_incident
 from dotenv import dotenv_values
+import text_bison as bison
+import text_gemini as gemini
 
 app = Flask(__name__)
 
@@ -24,10 +25,27 @@ app = Flask(__name__)
 def get_incident_summarization_by_id(incident_id):
     try:
         config = dotenv_values('.env')
-        content_template="v1_incident_template.txt"
-        incident_content=get_incident_content(incident_id=incident_id, content_template= content_template,config=config)
-        incident_summarization=summarize_incident(incident_content,config)
-        return jsonify({'success': True, 'incident_summarization': incident_summarization})
+        # content_template="v1_incident_template.txt"
+        incident_content=get_incident_content(incident_id=incident_id,config=config)
+        model_id=config["GEN_AI_MODEL_ID"]
+        if model_id==1:
+            model='bison'
+            incident_summarization=bison.summarize_incident(incident_content,config)
+        else:
+            incident_summarization=""
+            model='gemini'
+            responses=gemini.summarize_incident(incident_content,config)
+            for response in responses:
+                incident_summarization=incident_summarization+response.text 
+
+        # return jsonify({'success': True, 
+        #         'incident_summarization': incident_summarization
+        #         })
+        return jsonify({'success': True, 
+                        'incident_content': incident_content,
+                        'incident_summarization': incident_summarization,
+                        'model':model,
+                        })
 
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})
