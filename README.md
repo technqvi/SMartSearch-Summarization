@@ -5,7 +5,8 @@ Build Enterprise Search using [Vertex AI Search](https://cloud.google.com/vertex
 ### Incident Search (Vertex AI Search) 
 * Retrive incident and detail data from database to create ndjson file.
 * Ingest recently created json file to Google Cloud Storage.
-* Import json file from Google Cloud Storage to Search DataStore.
+* Import json file from Google Cloud Storage to Search DataStore increamentally on daily basis.
+* Try search something on Search page.
 
 <img width="2072" alt="seach-to-summary" src="https://github.com/technqvi/SMartSearch-Summarization/assets/38780060/808026c2-a495-447b-a3e2-12a730f94736">
 ### Incident Summarization (Vertex AI Gen-AI)
