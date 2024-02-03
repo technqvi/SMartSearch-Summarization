@@ -1,5 +1,5 @@
 Provide a concise summary for the following IT-Incident-Case:
-Return the summarization response including no more than 5 bullets and 5 paragraphs and add on no more than 2 bullets of the most relevant and beneficial pieces of best practices/advice 
+Return the summarization response with words,phrases,sentences in English that are not too difficult to understand for non-native speaker including no more than 8 bullets and 8 paragraphs and add on no more than 2 bullets of the most relevant and beneficial pieces of best practices/advice 
 that cover the key attributes and key points of the text.
 
 IT-Incident was reported at  {{ sr['open_datetime'] }} and it was resolved completely at {{ sr['close_datetime'] }}.
@@ -25,4 +25,5 @@ Each solution consists of engineer-team and solution-description accordingly.
 
  {% endfor %}
 
- Bulletpoints and Paragraphs Summary:
+
+Bulletpoints and Paragraphs Summary:

@@ -7,14 +7,33 @@ Summary:
 My Template Ver#2
 """"
 Provide a concise summary for the following IT-Incident-Case:
-Return the summarization response including no more than 5 bullets and 5 paragraphs and add on no more than 2 bullets of the most relevant and beneficial pieces of best practices/advice 
+Return the summarization response with words/phrases/sentences in English that are not too difficult to understand for non-native  including no more than 5 bullets and 5 paragraphs and add on no more than 2 bullets of the most relevant and beneficial pieces of best practices/advice 
 that cover the key attributes and key points of the text.
 
-{incident_promt }
-{detail_promtxt}
+IT-Incident was reported at  {{ sr['open_datetime'] }} and it was resolved completely at {{ sr['close_datetime'] }}.
+It was involved {{ sr['incident_type'] }}  and  severity-level  was {{ sr['severity'] }}.
 
-Bulletpoints and Paragraphs Summary:
+The following bullets  are detailed  of the {{ sr['product_type'] }}
+  - Serial Number : {{ sr['serial'] }}
+  - Model : {{ sr['model'] }}
+  - Brand( Manufactured by) :  {{ sr['brand'] }}. 
 
+The incident involved in the following detail.
+{{ sr['subject'] }}
+
+For more detail ,incident description was indicated as below.
+{{ sr['description'] }}
+
+The last section , it summarizes how to fix the problem  with the list of solutions as below.
+Each solution consists of engineer-team and solution-description accordingly. 
+
+{% for index,item in df.iterrows() %}
+  {{ item['running_number'] }} # {{ item['engineer_team'] }} :  
+  {{ item['solution'] }}
+
+ {% endfor %}
+
+ Bulletpoints and Paragraphs Summary:
 
 """
 
