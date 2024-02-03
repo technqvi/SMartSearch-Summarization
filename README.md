@@ -11,6 +11,7 @@ Build Enterprise Search using [Vertex AI Search](https://cloud.google.com/vertex
 
 ### Incident Summarization (Vertex AI Gen-AI)
 <img width="2072" alt="seach-to-summary" src="https://github.com/technqvi/SMartSearch-Summarization/assets/38780060/808026c2-a495-447b-a3e2-12a730f94736">
+
 * Try search something on Search page and click to view search results detail.
 * Click Summarization on Search page 
 * Grab entire incidence detail to create incident content template to let Gen-AI generate incident summary.
