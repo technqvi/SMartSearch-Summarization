@@ -6,7 +6,8 @@ Build Enterprise Search using [Vertex AI Search](https://cloud.google.com/vertex
 * Retrive incident and detail data from database to create ndjson file.
 * Ingest recently created json file to Google Cloud Storage.
 * Import json file from Google Cloud Storage to Search DataStore increamentally on daily basis.
-* On The Search Page .try search something on Search page and it allow you to narrow down the search results  with Facet-Widget below the search textbox.
+* On The Search Page ,try search something such as brand,model,incident type,subject, description on Search page to get the result. 
+* Additionally, you can use the Facet-Widget below the search text box to narrow down to get more accurate results.
 
 ### Incident Summarization (Vertex AI Gen-AI)
 <img width="2072" alt="seach-to-summary" src="https://github.com/technqvi/SMartSearch-Summarization/assets/38780060/808026c2-a495-447b-a3e2-12a730f94736">
