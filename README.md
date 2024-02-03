@@ -2,12 +2,14 @@
 Build Enterprise Search using [Vertex AI Search](https://cloud.google.com/vertex-ai-search-and-conversation?hl=en) and Text Summarization using  [Google Generative-AI Model](https://cloud.google.com/vertex-ai/docs/generative-ai/learn/introduction-prompt-design) for IT Incident of [SMartApp](https://github.com/technqvi/SMartApp). The figure and description below how it works. 
 <img width="998" alt="overview" src="https://github.com/technqvi/SMartSearch-Summarization/assets/38780060/b028d869-b75e-473c-9c38-8dd7cec69347">
 
-
 ### Incident Search (Vertex AI Search) 
 * Retrive incident and detail data from database to create ndjson file.
 * Ingest recently created json file to Google Cloud Storage.
 * Import json file from Google Cloud Storage to Search DataStore.
+
+<img width="2072" alt="seach-to-summary" src="https://github.com/technqvi/SMartSearch-Summarization/assets/38780060/808026c2-a495-447b-a3e2-12a730f94736">
 ### Incident Summarization (Vertex AI Gen-AI)
+
 * Try search something on Search page and click to view search results detail.
 * Click Summarization on Search page 
 * Grab entire incidence detail to create incident content template to let Gen-AI generate incident summary.
