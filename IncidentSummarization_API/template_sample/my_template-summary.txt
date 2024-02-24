@@ -1,6 +1,10 @@
 My Template Ver#1 (Simple Template)
 Provide a summary, no more than 5 paragraphs for following IT-Incident-Case:
 
+Provide a concise summary for the following IT-Incident-Case:
+Return the summarization response with words/phrases/sentences in English that are not too difficult to understand for non-native  including no more than 5 bullets and 5 paragraphs and add on no more than 2 bullets of the most relevant and beneficial pieces of best practices/advice 
+that cover the key attributes and key points of the text.
+
 Summary:
 -----------------------------------------------------------------
 

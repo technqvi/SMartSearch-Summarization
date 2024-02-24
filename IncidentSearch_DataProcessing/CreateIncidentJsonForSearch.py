@@ -100,6 +100,7 @@ def create_incident_json_data(start_date_query:str,end_date_query:str,config)-> 
 
     ,CONCAT(brand.brand_name,' - ',model.model_name,'- ',serial_number) as inventory_item
     ,brand.brand_name as brand,model.model_name as model,inventory.serial_number
+    ,incident.updated_at AT time zone 'utc' as updated_at
 
 
     from app_incident as incident
@@ -164,6 +165,8 @@ def create_incident_json_data(start_date_query:str,end_date_query:str,config)-> 
 
     df_all['description']=df_all['description'].apply(replace_ILLEGAL_CHARACTERS) 
     df_all['description']=df_all['description'].apply(replace_NewLine_CHARACTERS)
+    
+    df_all['updated_at']= df_all['updated_at'].dt.strftime('%Y-%m-%d %H:%M:%S')
 
     print(df_all.info())
     df_all.tail()
