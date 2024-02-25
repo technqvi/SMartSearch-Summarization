@@ -24,7 +24,7 @@ Build Enterprise Search using [Vertex AI Search](https://cloud.google.com/vertex
 sequcially as above process description in [Incident Search (Vertex AI Search)](https://github.com/technqvi/SMartSearch-Summarization?tab=readme-ov-file#incident-search-vertex-ai-search)
 * [IncidentSearch_DataProcessing](https://github.com/technqvi/SMartSearch-Summarization/tree/main/IncidentSearch_DataProcessing)  : 3 Core module files to ingest json data from database to cloud starage and  data store in Searh App accordingly. 
 * [IncidentSummarization_API](https://github.com/technqvi/SMartSearch-Summarization/tree/main/IncidentSummarization_API) : Module files and template files to generate incident summarization as specified template description, It is service as FLASK API in order for SMartApp WebApplication to invoke this function . 
-
+* [IncidentVectorSearch](https://github.com/technqvi/SMartSearch-Summarization/tree/main/IncidentVectorSearch) : Implement Vertex AI Vector Search to return the top 5 of the most relevant incident subjects corresponding to your keywords on the search page.
 ## References Service and Solution
 * [Google Cloud Storage](https://cloud.google.com/storage/docs/creating-buckets)
 * [Introduction to Vertex AI Search](https://cloud.google.com/generative-ai-app-builder/docs/enterprise-search-introduction?hl=en)
