@@ -32,3 +32,4 @@ sequcially as above process description in [Incident Search (Vertex AI Search)](
 * [Prompt-Design](https://cloud.google.com/vertex-ai/docs/generative-ai/text/text-prompts#summarization_prompts)
 * [Google-Generative-aI](https://github.com/GoogleCloudPlatform/generative-ai/tree/main)
 * [Text Summarization](https://github.com/GoogleCloudPlatform/generative-ai/blob/main/language/prompts/examples/text_summarization.ipynb)
+* [Overview of Vertex AI Vector Search](https://cloud.google.com/vertex-ai/docs/vector-search/overview)
